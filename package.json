@@ -1,0 +1,20 @@
+{
+  "name": "martian-icon",
+  "version": "1.0.0",
+  "description": "icos of martian",
+  "main": "src/index.js",
+  "files": [
+  	"src/*"
+  ],
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "react-art": "^0.15.1",
+    "react": "^15.1.0",
+    "react-native": "^0.27.1"
+  },
+  "author": "XuChang",
+  "license": "ISC"
+}
