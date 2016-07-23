@@ -4,7 +4,7 @@
 "use strict";
 
 import React, {Component} from "react";
-import {ART as ReactART} from "react-native";
+import {ART as ReactART, TouchableHighlight, View} from "react-native";
 const {
 	Group,
 	Shape,
@@ -41,13 +41,27 @@ class Svg extends Component {
 			(path, idx) => {
 				shapes.push(
 					(
-						<Shape fill={setting["color" + idx] || setting.color} stroke={setting["stroke" + idx]} strokeWidth={setting["strokeWidth" + idx]}
+						<Shape fill={setting["color" + idx] || setting.color} stroke={setting["stroke" + idx] || setting.stroke} strokeWidth={setting["strokeWidth" + idx] || setting.strokeWidth}
 							   d={path} key={idx}/>
 					)
 				)
 			}
 		);
 
+		let on
+		if(setting.touchable) {
+			return (
+				<TouchableHighlight style={{backgroundColor: setting.backgroundColor}} underlayColor={setting.underlayColor} onPress={setting.onPress}>
+					<View>
+						<Surface width={setting.width} height={setting.height}>
+							<Group scale={scale}>
+								{shapes}
+							</Group>
+						</Surface>
+					</View>
+				</TouchableHighlight>
+			);
+		}
 		return (
 			<Surface width={setting.width} height={setting.height}>
 				<Group scale={scale}>

@@ -12,8 +12,16 @@ module.exports = {
 		height: defaultSize,
 		size: defaultSize,
 		color: "#FF630E",
+		onDisableColor: "#D3D3D3",
 		group: "core",
-		name: "password"
+		name: "password",
+		disabled: false,
+		touchable: false,
+		backgroundColor: 'white',
+		underlayColor: 'cyan',
+		onPress: () => {
+			alert("点击了图标");
+		}
 	},
 	normalizeValue: function(v) {
 		if(v.size !== defaultSize && v.width === defaultSize) {
@@ -21,6 +29,9 @@ module.exports = {
 		}
 		if(v.size !== defaultSize && v.height === defaultSize) {
 			v.height = v.size;
+		}
+		if(v.disabled) {
+			v.color = v.onDisableColor;
 		}
 	}
 };
