@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 		color: "black",
 		marginLeft: 10,
 		marginRight: 10,
-		height: 20,
+		height: 40,
 		textAlign: 'center'
 	}
 });
@@ -66,7 +66,7 @@ function renderListItem(item, idx) {
 					alignItems: 'center',
 					justifyContent: 'center'
 				}}>
-					<MtIcon group={this.props.name} name={item.name} size={80}/>
+					<MtIcon group={this.props.name} name={item.name} size={70}/>
 				</View>
 				<Text style={styles.itemName} numOfLines={2}>{item.name}</Text>
 			</View>
