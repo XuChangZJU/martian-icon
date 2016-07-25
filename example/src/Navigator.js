@@ -10,6 +10,7 @@ import {
 	Text,
 	TouchableHighlight,
 	View,
+	StatusBar,
 	Platform,
 	BackAndroid
 } from "react-native";
@@ -85,12 +86,31 @@ class Navigator2 extends Component {
 			view: require("./IconGroup")
 		};
 		return (
-			<Navigator
-				initialRoute={initialRoute}
-				renderScene={this.renderScene.bind(this)}
-			/>
+			<View style={styles.container}>
+				<StatusBar
+					translucent={true}
+					backgroundColor="blue"
+					barStyle="light-content"
+				/>
+				<Navigator
+					initialRoute={initialRoute}
+					renderScene={this.renderScene.bind(this)}
+				/>
+			</View>
 		);
 	}
 }
+
+const styles = StyleSheet.create({
+	container: {
+		backgroundColor: 'gray',
+		flex: 1,
+	},
+	text: {
+		fontSize: 20,
+		color: 'red',
+		textAlign: 'center',
+	},
+});
 
 module.exports = Navigator2;
