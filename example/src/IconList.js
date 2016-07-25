@@ -68,7 +68,7 @@ function renderListItem(item, idx) {
 				}}>
 					<MtIcon group={this.props.name} name={item.name} size={80}/>
 				</View>
-				<Text style={styles.itemName} numOfLines={1}>{item.name}</Text>
+				<Text style={styles.itemName} numOfLines={2}>{item.name}</Text>
 			</View>
 		</TouchableHighlight>
 	);

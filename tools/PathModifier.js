@@ -48,7 +48,7 @@ class PathModifier {
 				return callback(new Error("SVG参数viewBox不符合要求，要求是" + svgParam.viewBox + "，当前是" + result.svg.viewBox));
 			}
 			// 将svg中的path提取出来，加到文件的尾部
-			let content = ",\n" + name + ":\n[";
+			let content = ",\n\"" + name + "\":\n[";
 			let first = true;
 			function addPathToContent(obj) {
 				if(obj.path) {
