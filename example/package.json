@@ -1,5 +1,5 @@
 {
-  "name": "BleNative",
+  "name": "example",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "events": "^1.0.2",
     "martian-icon": "file:../",
     "martian-ui": "XuChangZJU/martian-ui#dev",
-    "react": "^15.1.0",
-    "react-native": "^0.27.2"
+    "react": "~15.2.1",
+    "react-native": "~0.31.0"
   }
 }

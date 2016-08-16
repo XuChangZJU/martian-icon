@@ -1,3 +1,3 @@
-rootProject.name = 'BleNative'
+rootProject.name = 'example'
 
 include ':app'

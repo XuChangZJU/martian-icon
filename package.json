@@ -12,8 +12,6 @@
   "dependencies": {
     "lodash": "^4.13.1",
     "react-art": "^0.15.1",
-    "react": "^15.1.0",
-    "react-native": "^0.27.1",
     "xml-digester": "^0.0.5"
   },
   "author": "XuChang",
