@@ -19,6 +19,8 @@ module.exports = {
 		touchable: false,
 		backgroundColor: 'white',
 		underlayColor: 'cyan',
+		drawStrokeWidth: 0.5,
+		drawStroke: "#FF630E",
 		onPress: () => {
 			alert("点击了图标");
 		}
