@@ -7,15 +7,15 @@ module.exports = {
 		{
 			font: {
 				fontFamily: 'PingFang-SC-Regular',
-				fontSize: 6
+				fontSize: 10.2463
 			},
 			transform: {
 				xx: 1,
 				yx: 0,
 				xy: 0,
 				yy: 1,
-				x: 6.1509,
-				y: 5.015
+				x: 5,
+				y: 2.8
 			},
 			text: '1'
 		}
@@ -24,15 +24,15 @@ module.exports = {
 		{
 			font: {
 				fontFamily: 'PingFang-SC-Regular',
-				fontSize: 6
+				fontSize: 10.2463
 			},
 			transform: {
 				xx: 1,
 				yx: 0,
 				xy: 0,
 				yy: 1,
-				x: 6.1509,
-				y: 5.015
+				x: 5,
+				y: 2.8
 			},
 			text: '2'
 		}
@@ -41,15 +41,15 @@ module.exports = {
 		{
 			font: {
 				fontFamily: 'PingFang-SC-Regular',
-				fontSize: 6
+				fontSize: 10.2463
 			},
 			transform: {
 				xx: 1,
 				yx: 0,
 				xy: 0,
 				yy: 1,
-				x: 6.1509,
-				y: 5.015
+				x: 5,
+				y: 2.8
 			},
 			text: '3'
 		}
@@ -58,15 +58,15 @@ module.exports = {
 		{
 			font: {
 				fontFamily: 'PingFang-SC-Regular',
-				fontSize: 6
+				fontSize: 10.2463
 			},
 			transform: {
 				xx: 1,
 				yx: 0,
 				xy: 0,
 				yy: 1,
-				x: 6.1509,
-				y: 5.015
+				x: 5,
+				y: 2.8
 			},
 			text: '4'
 		}

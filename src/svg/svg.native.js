@@ -34,6 +34,11 @@ class Svg extends Component {
 				texts = require("../text/core")[setting.name];
 				draws = require("../draw/core")[setting.name];
 				break;
+			case "rent":
+				paths = require("../path/rent")[setting.name];
+				texts = require("../text/rent")[setting.name];
+				draws = require("../draw/rent")[setting.name];
+				break;
 			default:
 				throw new Error("找不到对应的group名：" + setting.group);
 		}
@@ -59,7 +64,7 @@ class Svg extends Component {
 			texts.forEach(
 				(text, idx) => {
 					shapes.push(
-							<Text fill={setting["color" + idx] || setting.color} transform={new Transform(text.transform)} font={text.font} children={text.text} key={idxTotal+idx}/>
+						<Text fill={setting["color" + (idxTotal + idx)] || setting.color} transform={new Transform(text.transform)} font={text.font} children={text.text} key={idxTotal+idx}/>
 					);
 				}
 			);
@@ -79,16 +84,23 @@ class Svg extends Component {
 						case "line":
 							path = Path().moveTo(value.x1, value.y1).lineTo(value.x2, value.y2).close();
 							break;
+						case "polyline":
+							path = Path().moveTo(value[0][0], value[0][1]);
+                            for(let i = 1; i < value.length; i ++) {
+                                path.lineTo(value[i][0], value[i][1]);
+                            }
+                            path.close();
+                            break;
 						default:
 							throw new Error("不支持的draw类型【" + draw.type + "】");
 					}
-					const props = assign({}, {
-						stroke: setting["color" + (idxTotal + idx)] || setting.color || setting.drawStroke,
-						strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth
-					}, draw.props);
+					const props = assign({}, draw.props, {
+                        stroke: setting["color" + (idxTotal + idx)] || setting.color || setting.drawStroke,
+                        strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth
+                    });
 					shapes.push(
 						<Shape {...props}
-							   d={path} key={idxTotal + idx}/>
+							d={path} key={idxTotal + idx}/>
 					)
 				}
 			)

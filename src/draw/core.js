@@ -8,9 +8,9 @@ module.exports = {
 		{
 			type: "circle",
 			value: {
-				cx: 7.908,
-				cy: 8.196,
-				r: 4.417
+				cx: 7.951,
+				cy: 8.195,
+				r: 7.542
 			}
 		}
 	],
@@ -18,9 +18,9 @@ module.exports = {
 		{
 			type: "circle",
 			value: {
-				cx: 7.908,
-				cy: 8.196,
-				r: 4.417
+				cx: 7.951,
+				cy: 8.195,
+				r: 7.542
 			}
 		}
 	],
@@ -28,9 +28,9 @@ module.exports = {
 		{
 			type: "circle",
 			value: {
-				cx: 7.908,
-				cy: 8.196,
-				r: 4.417
+				cx: 7.951,
+				cy: 8.195,
+				r: 7.542
 			}
 		}
 	],
@@ -38,9 +38,98 @@ module.exports = {
 		{
 			type: "circle",
 			value: {
-				cx: 7.908,
-				cy: 8.196,
-				r: 4.417
+				cx: 7.951,
+				cy: 8.195,
+				r: 7.542
+			}
+		}
+	],
+	"add":  [
+		{
+			type: "line",
+			value: {
+				x1: 7.968,
+				y1: 0.427,
+				x2: 7.968,
+				y2: 15.573
+			},
+			props: {
+				strokeWidth: 1
+			}
+		},
+		{
+			type: "line",
+			value: {
+				x1: 15.541,
+				y1: 7.823,
+				x2: 0.395,
+				y2: 7.823
+			},
+			props: {
+				strokeWidth: 1
+			}
+		}
+	],
+	"right": [
+		{
+			type: "line",
+			value: {
+				x1:	0.571,
+				y1: 7.839,
+				x2: 6.402,
+				y2: 12.484
+			},
+			props: {
+				strokeWidth: 1
+			}
+		},
+		{
+			type: "line",
+			value: {
+				x1: 6.402,
+				y1: 12.484,
+				x2: 15.428,
+				y2: 4.541
+			},
+			props: {
+				strokeWidth: 1
+			}
+		}
+	],
+	"right2": [
+		{
+			type: "line",
+			value: {
+				x1:	4.697,
+				y1: 7.737,
+				x2: 7.322,
+				y2: 9.828
+			},
+			props: {
+				strokeWidth: 0.75
+			}
+		},
+		{
+			type: "line",
+			value: {
+				x1: 7.322,
+				y1: 9.828,
+				x2: 11.385,
+				y2: 6.253
+			},
+			props: {
+				strokeWidth: 0.75
+			}
+		},
+		{
+			type: "circle",
+			value: {
+				cx: 8.041,
+				cy: 8.04,
+				r: 7.5
+			},
+			props: {
+				strokeWidth: 0.5
 			}
 		}
 	],
@@ -76,6 +165,32 @@ module.exports = {
 				y1: 10.85,
 				x2: 6.436,
 				y2: 10.85
+			},
+			props: {
+				strokeWidth: 1
+			}
+		}
+	],
+	"wrong2": [
+		{
+			type: "line",
+			value: {
+				x1:	15.086,
+				y1: 1.2,
+				x2: 1.2,
+				y2: 15.086
+			},
+			props: {
+				strokeWidth: 1
+			}
+		},
+		{
+			type: "line",
+			value: {
+				x1: 15.086,
+				y1: 15.086,
+				x2: 1.2,
+				y2: 1.2
 			},
 			props: {
 				strokeWidth: 1

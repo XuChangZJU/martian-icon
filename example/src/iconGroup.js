@@ -22,11 +22,12 @@ const iconGroup = [
 	{
 		name: "core",
 		icons: require("martian-icon/src/path/core"),
-		desc: "核心模块中所用的Icon"
+		desc: "Core模块中所用的Icon"
 	},
 	{
-		name: "todo",
-		desc: "下一个icon组"
+		name: "rent",
+		icons: require("martian-icon/src/path/rent"),
+		desc: "Rent模块中所用的Icon"
 	},
 	{
 		name: "todo",
