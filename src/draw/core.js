@@ -196,5 +196,35 @@ module.exports = {
 				strokeWidth: 1
 			}
 		}
-	]
+	],
+	"masterKey": [
+		{
+			type: "circle",
+			value: {
+				cx: 8,
+				cy: 8,
+				r: 8
+			}
+		}
+	],
+	"tempKey": [
+		{
+			type: "circle",
+			value: {
+				cx: 8,
+				cy: 8,
+				r: 8
+			}
+		}
+	],
+	"slaveKey": [
+		{
+			type: "circle",
+			value: {
+				cx: 8,
+				cy: 8,
+				r: 8
+			}
+		}
+	],
 }
