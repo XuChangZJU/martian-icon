@@ -96,7 +96,8 @@ class Svg extends Component {
 					}
 					const props = assign({}, draw.props, {
                         stroke: setting["color" + (idxTotal + idx)] || setting.color || setting.drawStroke,
-                        strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth
+                        strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth,
+						fill: setting["fill" + (idxTotal + idx)] || setting.fill
                     });
 					shapes.push(
 						<Shape {...props}
