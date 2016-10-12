@@ -227,4 +227,13 @@ module.exports = {
 			}
 		}
 	],
+	"dirty": [
+		{
+			type: "polyline",
+			value: [[16, 16],[0, 16], [16, 0]],
+			props: {
+				strokeWidth: 1
+			}
+		}
+	],
 }
