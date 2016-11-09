@@ -27,9 +27,9 @@ class Svg extends Component {
 
 Svg.propTypes = {
     touchable: PropTypes.bool,
-    backgroundColr: PropTypes.object,
+    backgroundColor: PropTypes.string,
     underlayColor: PropTypes.object,
-    onPress: PropTypes.object
+    onPress: PropTypes.func
 };
 
 module.exports = Svg;
