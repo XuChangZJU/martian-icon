@@ -80,23 +80,36 @@ class SvgImpl extends Component {
                             path = Path().moveTo(value.cx, value.cy - value.r).arc(0, value.r * 2, value.r).arc(0, value.r * -2, value.r).close();
                             break;
                         case "line":
-                            path = Path().moveTo(value.x1, value.y1).lineTo(value.x2, value.y2).close();
+                            path = Path().moveTo(value.x1, value.y1).lineTo(value.x2, value.y2);
                             break;
                         case "polyline":
                             path = Path().moveTo(value[0][0], value[0][1]);
                             for(let i = 1; i < value.length; i ++) {
                                 path.lineTo(value[i][0], value[i][1]);
                             }
-                            path.close();
+                            break;
+                        case "rect":
+                            path = Path()
+                                .moveTo(value.x, value.y)
+                                .lineTo(value.x + value.w, value.y)
+                                .lineTo(value.x + value.w, value.y + value.h)
+                                .lineTo(value.x, value.y + value.h)
+                                .lineTo(value.x, value.y)
+                                .close();
                             break;
                         default:
                             throw new Error("不支持的draw类型【" + draw.type + "】");
                     }
-                    const props = assign({}, draw.props, {
+                    const props = assign({}, {
                         stroke: setting["color" + (idxTotal + idx)] || setting.color || setting.drawStroke,
                         strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth,
                         fill: setting["fill" + (idxTotal + idx)] || setting.fill
-                    });
+                    }, draw.props);
+
+                    // 处理一下transform
+                    if (props.transform) {
+                        props.transform = new Transform(props.transform);
+                    }
                     shapes.push(
                         <Shape {...props}
                             d={path} key={idxTotal + idx}/>

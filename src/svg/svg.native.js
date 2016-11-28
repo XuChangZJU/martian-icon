@@ -28,7 +28,7 @@ class Svg extends Component {
 Svg.propTypes = {
     touchable: PropTypes.bool,
     backgroundColor: PropTypes.string,
-    underlayColor: PropTypes.object,
+    underlayColor: PropTypes.string,
     onPress: PropTypes.func
 };
 

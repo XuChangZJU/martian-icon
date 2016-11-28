@@ -2,48 +2,9 @@
  * Created by Administrator on 2016/9/8.
  */
 "use strict";
+const defaultColor = require('../constant').defaultValue.color;
 
 module.exports = {
-	"one": [
-		{
-			type: "circle",
-			value: {
-				cx: 7.951,
-				cy: 8.195,
-				r: 7.542
-			}
-		}
-	],
-	"two": [
-		{
-			type: "circle",
-			value: {
-				cx: 7.951,
-				cy: 8.195,
-				r: 7.542
-			}
-		}
-	],
-	"three": [
-		{
-			type: "circle",
-			value: {
-				cx: 7.951,
-				cy: 8.195,
-				r: 7.542
-			}
-		}
-	],
-	"four": [
-		{
-			type: "circle",
-			value: {
-				cx: 7.951,
-				cy: 8.195,
-				r: 7.542
-			}
-		}
-	],
 	"add":  [
 		{
 			type: "line",
@@ -197,26 +158,6 @@ module.exports = {
 			}
 		}
 	],
-	"masterKey": [
-		{
-			type: "circle",
-			value: {
-				cx: 8,
-				cy: 8,
-				r: 8
-			}
-		}
-	],
-	"tempKey": [
-		{
-			type: "circle",
-			value: {
-				cx: 8,
-				cy: 8,
-				r: 8
-			}
-		}
-	],
 	"slaveKey": [
 		{
 			type: "circle",
@@ -236,4 +177,46 @@ module.exports = {
 			}
 		}
 	],
+	"key-house": [
+		{
+			type: "polyline",
+			value: [[-10.19,-3.64],[-10.42,-3.43], [-10.21,-3.66]],
+			props: {
+				strokeWidth: 1
+			}
+		},
+		{
+			type: "polyline",
+			value: [[-9.95,-3.42],[-10.19,-3.64], [-10.17,-3.66 ]],
+			props: {
+				strokeWidth: 1
+			}
+		}
+	],
+	"order-success": [
+		{
+			type: "polyline",
+			value: [[9.08,12.304], [10.3,13.523], [13.107,10.752]]
+		}
+	],
+	"order-failure": [
+		{
+			type: "line",
+			value: {
+				x1:	9.364,
+				y1: 13.681,
+				x2: 12.599,
+				y2: 10.482
+			},
+		},
+		{
+			type: "line",
+			value: {
+				x1:	12.599,
+				y1: 13.681,
+				x2: 9.364,
+				y2: 10.482
+			},
+		}
+	]
 }
