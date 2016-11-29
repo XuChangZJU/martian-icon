@@ -50,7 +50,7 @@ class SvgImpl extends Component {
             (path, idx) => {
                 shapes.push(
                     (
-                        <Shape fill={setting["color" + idx] || setting.color} stroke={setting["stroke" + idx] || setting.stroke} strokeWidth={setting["strokeWidth" + idx] || setting.strokeWidth}
+                        <Shape fill={setting["fill" + idx] || setting.color} stroke={setting["color" + idx] || setting.stroke} strokeWidth={setting["strokeWidth" + idx] || setting.strokeWidth}
                                d={path} key={idx}/>
                     )
                 )
@@ -62,7 +62,7 @@ class SvgImpl extends Component {
             texts.forEach(
                 (text, idx) => {
                     shapes.push(
-                        <Text fill={setting["color" + (idxTotal + idx)] || setting.color} transform={new Transform(text.transform)} font={text.font} children={text.text} key={idxTotal+idx}/>
+                        <Text fill={setting["fill" + (idxTotal + idx)] || setting.fill} transform={new Transform(text.transform)} font={text.font} children={text.text} key={idxTotal+idx}/>
                     );
                 }
             );
