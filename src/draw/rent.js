@@ -6,7 +6,7 @@ const defaultColor = require("../constant").defaultValue.color;
 module.exports = {
     "house2": [
         {
-            type: "polyline",
+            type: "polygon",
             value: [[7.975,0.902], [0.276,8.545], [1.929,8.545], [1.929,15.363], [6.572,15.363], [6.572,11.87], [9.571,11.87], [9.571,15.363],
                 [14.038,15.363], [14.038,8.545], [15.69,8.545]],
             props: {

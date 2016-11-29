@@ -170,7 +170,7 @@ module.exports = {
 	],
 	"dirty": [
 		{
-			type: "polyline",
+			type: "polygon",
 			value: [[16, 16],[0, 16], [16, 0]],
 			props: {
 				strokeWidth: 1
@@ -190,6 +190,22 @@ module.exports = {
 			value: [[-9.95,-3.42],[-10.19,-3.64], [-10.17,-3.66 ]],
 			props: {
 				strokeWidth: 1
+			}
+		}
+	],
+	"key-bleConnecting": [
+		{
+			type: "polygon",
+			value: [[4.687,8.029], [2.616,9.35], [2.616,6.66]],
+			props: {
+				fill: defaultColor
+			}
+		},
+		{
+			type: "polygon",
+			value: [[11.158,7.98], [13.229,6.66], [13.229,9.35]],
+			props: {
+				fill: defaultColor
 			}
 		}
 	],

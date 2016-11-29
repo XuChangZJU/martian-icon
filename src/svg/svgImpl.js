@@ -88,6 +88,13 @@ class SvgImpl extends Component {
                                 path.lineTo(value[i][0], value[i][1]);
                             }
                             break;
+                        case "polygon":
+                            path = Path().moveTo(value[0][0], value[0][1]);
+                            for(let i = 1; i < value.length; i ++) {
+                                path.lineTo(value[i][0], value[i][1]);
+                            }
+                            path.close();
+                            break;
                         case "rect":
                             path = Path()
                                 .moveTo(value.x, value.y)
