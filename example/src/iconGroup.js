@@ -22,17 +22,34 @@ const iconGroup = [
 	{
 		name: "core",
 		icons: require("martian-icon/src/path/core"),
-		desc: "Core模块中所用的Icon"
+		desc: "Core模块中所用的图标"
 	},
 	{
 		name: "rent",
 		icons: require("martian-icon/src/path/rent"),
-		desc: "Rent模块中所用的Icon"
+		desc: "Rent中的房屋配置图标"
 	},
 	{
-		name: "todo",
-		desc: "下一个icon组"
+		name: "list",
+		icons: require("martian-icon/src/path/list"),
+		desc: "列表左边的图标"
+	},
+	{
+		name: "nav",
+		icons: require("martian-icon/src/path/nav"),
+		desc: "底部导航栏的图标"
+	},
+	{
+		name: "key",
+		icons: require("martian-icon/src/path/key"),
+		desc: "钥匙中的图标"
+	},
+	{
+		name: "other",
+		icons: require("martian-icon/src/path/other"),
+		desc: "如webview中的图标"
 	}
+
 ];
 
 const length = (Dimensions.get("window").width - 60)/3;

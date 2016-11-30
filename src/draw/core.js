@@ -234,5 +234,19 @@ module.exports = {
 				y2: 10.482
 			},
 		}
+	],
+	"test": [
+		{
+			type: "rect",
+			value: {
+				x: 5.087,
+				y: 7.707,
+				w: 4.703,
+				h: 0.782
+			},
+			props: {
+				fill: defaultColor
+			}
+		}
 	]
 }

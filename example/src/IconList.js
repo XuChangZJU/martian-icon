@@ -20,7 +20,7 @@ let MtGrid = require('martian-ui').MtGrid;
 let MtIcon = require("martian-icon");
 
 
-const length = (Dimensions.get("window").width - 60)/3;
+const length = (Dimensions.get("window").width - 20)/3;
 const styles = StyleSheet.create({
 	groupItem: {
 		width: length,

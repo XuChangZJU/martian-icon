@@ -37,6 +37,26 @@ class SvgImpl extends Component {
                 texts = require("../text/rent")[setting.name];
                 draws = require("../draw/rent")[setting.name];
                 break;
+            case "list":
+                paths = require("../path/list")[setting.name];
+                texts = require("../text/list")[setting.name];
+                draws = require("../draw/list")[setting.name];
+                break;
+            case "nav":
+                paths = require("../path/nav")[setting.name];
+                texts = require("../text/nav")[setting.name];
+                draws = require("../draw/nav")[setting.name];
+                break;
+            case "key":
+                paths = require("../path/key")[setting.name];
+                texts = require("../text/key")[setting.name];
+                draws = require("../draw/key")[setting.name];
+                break;
+            case "other":
+                paths = require("../path/other")[setting.name];
+                texts = require("../text/other")[setting.name];
+                draws = require("../draw/other")[setting.name];
+                break;
             default:
                 throw new Error("找不到对应的group名：" + setting.group);
         }
@@ -50,7 +70,7 @@ class SvgImpl extends Component {
             (path, idx) => {
                 shapes.push(
                     (
-                        <Shape fill={setting["fill" + idx] || setting.color} stroke={setting["color" + idx] || setting.stroke} strokeWidth={setting["strokeWidth" + idx] || setting.strokeWidth}
+                        <Shape fill={setting["color" + idx] || setting.color} stroke={setting["stroke" + idx] || setting.stroke} strokeWidth={setting["strokeWidth" + idx] || setting.strokeWidth}
                                d={path} key={idx}/>
                     )
                 )
@@ -62,7 +82,7 @@ class SvgImpl extends Component {
             texts.forEach(
                 (text, idx) => {
                     shapes.push(
-                        <Text fill={setting["fill" + (idxTotal + idx)] || setting.fill} transform={new Transform(text.transform)} font={text.font} children={text.text} key={idxTotal+idx}/>
+                        <Text fill={setting["color" + (idxTotal + idx)] || setting.color} transform={new Transform(text.transform)} font={text.font} children={text.text} key={idxTotal+idx}/>
                     );
                 }
             );
@@ -108,14 +128,10 @@ class SvgImpl extends Component {
                             throw new Error("不支持的draw类型【" + draw.type + "】");
                     }
                     const props = assign({}, {
-                        stroke: setting.color || setting.drawStroke,
-                        strokeWidth: setting.strokeWidth || setting.drawStrokeWidth,
-                        fill: setting.fill
-                    }, draw.props, {
-                        stroke: setting["color" + (idxTotal + idx)],
-                        strokeWidth: setting["strokeWidth" + (idxTotal + idx)],
-                        fill: setting["fill" + (idxTotal + idx)]
-                    });
+                        stroke: setting["color" + (idxTotal + idx)] || setting.color || setting.drawStroke,
+                        strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth,
+                        fill: setting["fill" + (idxTotal + idx)] || setting.fill
+                    }, draw.props);
 
                     // 处理一下transform
                     if (props.transform) {
