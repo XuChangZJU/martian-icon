@@ -116,5 +116,39 @@ module.exports = {
             }
         }
     ],
-
+    "wash": [
+        {
+            type: "circle",
+            value: {
+                cx: 3.302,
+                cy: 2.176,
+                r: 0.281
+            },
+            props: {
+                fill: defaultColor
+            }
+        },
+        {
+            type: "circle",
+            value: {
+                cx: 5.0,
+                cy: 2.176,
+                r: 0.281
+            },
+            props: {
+                fill: defaultColor
+            }
+        },
+        {
+            type: "circle",
+            value: {
+                cx: 12.543,
+                cy: 2.176,
+                r: 0.281
+            },
+            props: {
+                fill: defaultColor
+            }
+        }
+    ],
 };
