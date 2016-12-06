@@ -4,7 +4,9 @@
 "use strict";
 const defaultColor = require("../constant").defaultValue.color;
 module.exports = {
-    "add1":  [
+
+    
+    /*"add1":  [
         {
             type: "line",
             value: {
@@ -29,5 +31,24 @@ module.exports = {
                 strokeWidth: 1
             }
         }
+    ],*/
+
+
+    "bleConnection": [
+        {
+            type: "polygon",
+            value: [[11.887,7.985], [12.743,7.439], [12.743,8.552]],
+            props: {
+                fill: defaultColor
+            }
+        },
+        {
+            type: "polygon",
+            value: [[4.113,7.985], [3.257,7.439], [3.257,8.552]],
+            props: {
+                fill: defaultColor
+            }
+        }
     ]
+
 };
