@@ -6,6 +6,34 @@ import React, {Component, PropTypes} from "react";
 import {defaultValue, normalizeValue} from "../constant";
 import merge from "lodash/merge";
 import assign from "lodash/assign";
+import keys from 'lodash/keys';
+
+const CURRENT_PATHS = {
+    core: require('../path/core'),
+    key: require('../path/key'),
+    list: require('../path/list'),
+    nav: require('../path/nav'),
+    other: require('../path/other'),
+    rent: require('../path/rent'),
+};
+
+const CURRENT_TEXTS = {
+    core: require('../text/core'),
+    key: require('../text/key'),
+    list: require('../text/list'),
+    nav: require('../text/nav'),
+    other: require('../text/other'),
+    rent: require('../text/rent'),
+};
+
+const CURRENT_DRAWS = {
+    core: require('../draw/core'),
+    key: require('../draw/key'),
+    list: require('../draw/list'),
+    nav: require('../draw/nav'),
+    other: require('../draw/other'),
+    rent: require('../draw/rent'),
+};
 
 
 class SvgImpl extends Component {
@@ -26,44 +54,17 @@ class SvgImpl extends Component {
         const scale = (widthScale > heightScale) ? heightScale : widthScale;			// 一般都是放大吧，制作的默认尺寸是16
         let paths, texts, draws;
 
-        switch (setting.group.toLowerCase().trim()) {
-            case "core":
-                paths = require("../path/core")[setting.name];
-                texts = require("../text/core")[setting.name];
-                draws = require("../draw/core")[setting.name];
-                break;
-            case "rent":
-                paths = require("../path/rent")[setting.name];
-                texts = require("../text/rent")[setting.name];
-                draws = require("../draw/rent")[setting.name];
-                break;
-            case "list":
-                paths = require("../path/list")[setting.name];
-                texts = require("../text/list")[setting.name];
-                draws = require("../draw/list")[setting.name];
-                break;
-            case "nav":
-                paths = require("../path/nav")[setting.name];
-                texts = require("../text/nav")[setting.name];
-                draws = require("../draw/nav")[setting.name];
-                break;
-            case "key":
-                paths = require("../path/key")[setting.name];
-                texts = require("../text/key")[setting.name];
-                draws = require("../draw/key")[setting.name];
-                break;
-            case "other":
-                paths = require("../path/other")[setting.name];
-                texts = require("../text/other")[setting.name];
-                draws = require("../draw/other")[setting.name];
-                break;
-            default:
-                throw new Error("找不到对应的group名：" + setting.group);
+        // 更新，忽略掉Group输入项
+        const group = keys(CURRENT_PATHS).find(
+            (ele) => CURRENT_PATHS[ele].hasOwnProperty(setting.name)
+        );
+        if (!group) {
+            throw new Error(`没有找到名称为${setting.name}的icon`);
         }
 
-        if(!paths) {
-            throw new Error("在group " + setting.group + "下找不到对应的icon名：" + setting.name);
-        }
+        paths = CURRENT_PATHS[group][setting.name];
+        texts = CURRENT_TEXTS[group][setting.name];
+        draws = CURRENT_DRAWS[group][setting.name];
 
         let shapes = [], idxTotal = 0;
         paths.forEach(
