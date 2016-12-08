@@ -81,7 +81,7 @@ module.exports = {
             }
         }
     ],
-    "wifiRouter": [
+    "router": [
         {
             type: "circle",
             value: {
@@ -120,9 +120,9 @@ module.exports = {
         {
             type: "circle",
             value: {
-                cx: 3.302,
-                cy: 2.176,
-                r: 0.281
+                cx: 3.671,
+                cy: 2.353,
+                r: 0.381
             },
             props: {
                 fill: defaultColor
@@ -131,9 +131,9 @@ module.exports = {
         {
             type: "circle",
             value: {
-                cx: 5.0,
-                cy: 2.176,
-                r: 0.281
+                cx: 5.5,
+                cy: 2.353,
+                r: 0.381
             },
             props: {
                 fill: defaultColor
@@ -142,9 +142,9 @@ module.exports = {
         {
             type: "circle",
             value: {
-                cx: 12.543,
-                cy: 2.176,
-                r: 0.281
+                cx: 12.415,
+                cy: 2.353,
+                r: 0.381
             },
             props: {
                 fill: defaultColor
