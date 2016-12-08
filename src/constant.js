@@ -13,7 +13,7 @@ module.exports = {
 		size: defaultSize,
 		color: "#FF630E",
 		onDisableColor: "#D3D3D3",
-		group: "core",
+		// group: "core",
 		name: "password",
 		disabled: false,
 		touchable: false,
