@@ -14,7 +14,7 @@ module.exports = {
 		color: "#FF630E",
 		onDisableColor: "#D3D3D3",
 		// group: "core",
-		name: "password",
+		// name: "password",
 		disabled: false,
 		touchable: false,
 		backgroundColor: 'white',
