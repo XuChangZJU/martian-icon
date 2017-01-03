@@ -14,4 +14,20 @@ module.exports = {
             }
         }
     ],
+    "camera": [
+
+        {
+            type: "circle",
+            value: {
+                cx: 13.703,
+                cy: 4.818,
+                r: 0.604
+            },
+            props: {
+                fill: defaultColor
+            }
+        },
+
+
+    ],
 };
