@@ -8,7 +8,7 @@ module.exports = {
     "dirty": [
         {
             type: "polygon",
-            value: [[15.489, 0.509],[15.489, 15.49], [0.51, 15.49]],
+            value: [[15.49, 0.51],[15.49, 15.49], [0.51, 15.49]],
             props: {
                 fill: defaultColor
             }
