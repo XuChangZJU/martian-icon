@@ -1,6 +1,6 @@
 {
   "name": "martian-icon",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "icos of martian",
   "main": "src/index.js",
   "files": [
