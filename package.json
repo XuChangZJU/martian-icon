@@ -4,10 +4,11 @@
   "description": "icos of martian",
   "main": "src/index.js",
   "files": [
-  	"src/*"
+    "src/*"
   ],
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "build": "cross-env BABEL_ENV=commonjs babel src --out-dir lib"
   },
   "dependencies": {
     "lodash": "^4.13.1",
@@ -15,5 +16,10 @@
     "xml-digester": "^0.0.5"
   },
   "author": "XuChang",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "cross-env": "^3.1.4"
+  }
 }
