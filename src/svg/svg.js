@@ -3,7 +3,7 @@
  */
 "use strict";
 
-import React, {Component} from "react";
+import React, { Component, PropTypes } from "react";
 const ReactART = require("react-art");
 const SvgImpl = require("./svgImpl");
 
@@ -24,7 +24,7 @@ class Svg extends Component {
 
 Svg.propTypes = {
 	touchable: PropTypes.bool,
-	backgroundColr: PropTypes.object,
+	backgroundColor: PropTypes.object,
 	underlayColor: PropTypes.object,
 	onPress: PropTypes.object
 };
