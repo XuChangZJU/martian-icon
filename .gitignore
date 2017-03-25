@@ -38,5 +38,7 @@ jspm_packages
 
 # svg file
 *.svg
+*.zip
+*.7z
 
 .idea

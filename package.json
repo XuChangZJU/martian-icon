@@ -4,7 +4,8 @@
   "description": "icos of martian",
   "main": "src/index.js",
   "files": [
-    "src/*"
+    "src/*",
+    "lib/*"
   ],
   "scripts": {
     "test": "mocha --recursive",
