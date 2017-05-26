@@ -4,19 +4,18 @@
 "use strict";
 
 import React, {Component, PropTypes} from "react";
-import {ART as ReactART, TouchableHighlight, View} from "react-native";
+import {ART as ReactART, TouchableOpacity, View} from "react-native";
 
 const SvgImpl = require("./svgImpl");
 
 class Svg extends Component {
     render() {
-        if(this.props.touchable) {
+        const { touchable, style, onPress, ...props } = this.props;
+        if(touchable) {
             return (
-                <TouchableHighlight style={{backgroundColor: this.props.backgroundColor}} underlayColor={this.props.underlayColor} onPress={this.props.onPress}>
-                    <View>
+                <TouchableOpacity style={style}  onPress={onPress}>
                         <SvgImpl {...this.props} reactArt={ReactART}/>
-                    </View>
-                </TouchableHighlight>
+                </TouchableOpacity>
             );
         }
         return (
