@@ -49,6 +49,7 @@ module.exports = {
                 fill: defaultColor
             }
         }
-    ]
+    ],
+   
 
 };
