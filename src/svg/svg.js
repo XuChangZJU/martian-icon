@@ -10,8 +10,9 @@ const SvgImpl = require("./svgImpl");
 class Svg extends Component {
 	render() {
 		if(this.props.touchable) {
+			/* style={{backgroundColor: this.props.backgroundColor}} underlayColor={this.props.underlayColor} onPress={this.props.onPress}*/
 			return (
-				<div/* style={{backgroundColor: this.props.backgroundColor}} underlayColor={this.props.underlayColor} onPress={this.props.onPress}*/>
+				<div>
 						<SvgImpl {...this.props} reactArt={ReactART}/>
 				</div>
 			);
