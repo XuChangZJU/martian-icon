@@ -128,11 +128,11 @@ class SvgImpl extends Component {
                         default:
                             throw new Error("不支持的draw类型【" + draw.type + "】");
                     }
-                    const props = assign({}, {
+                    const props = assign({}, draw.props, {
                         stroke: setting["color" + (idxTotal + idx)] || setting["stroke" + (idxTotal + idx)] || setting.color || setting.drawStroke,
                         strokeWidth: setting["strokeWidth" + (idxTotal + idx)] || setting["drawStrokeWidth" + (idxTotal + idx)] || setting.strokeWidth || setting.drawStrokeWidth,
                         fill: setting["fill" + (idxTotal + idx)] || setting.fill
-                    }, draw.props);
+                    });
 
 
                     // 处理一下transform
