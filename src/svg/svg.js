@@ -11,7 +11,7 @@ class Svg extends Component {
 	render() {
 		if(this.props.touchable) {
 			return (
-				<div/* style={{backgroundColor: this.props.backgroundColor}} underlayColor={this.props.underlayColor} onPress={this.props.onPress}*/>
+				<div>
 						<SvgImpl {...this.props} reactArt={ReactART}/>
 				</div>
 			);

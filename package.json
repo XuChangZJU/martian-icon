@@ -44,9 +44,10 @@
     "babel-plugin-transform-es3-member-expression-literals": "^6.5.0",
     "babel-plugin-transform-es3-property-literals": "^6.5.0",
     "babel-plugin-transform-object-rest-spread": "^6.3.13",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-register": "^6.3.13",
     "cross-env": "^3.1.4",
-    "mockjs": "1.0.1-beta2",
-    "expect.js": "latest"
+    "expect.js": "latest",
+    "mockjs": "1.0.1-beta2"
   }
 }
