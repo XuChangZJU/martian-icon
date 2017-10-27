@@ -77,6 +77,19 @@ module.exports = {
                 fill: defaultColor
             }
         }
-    ]
+    ],
+    "lock2": [
 
+        {
+            type: "circle",
+            value: {
+                cx: 6.631,
+                cy: 10.511,
+                r: 1.59
+            },
+            props: {
+                fill: defaultColor
+            }
+        },
+    ],
 };
